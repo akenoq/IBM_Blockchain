@@ -28,7 +28,7 @@ rule NetworkAdminSystem {
 
 rule LedgerAccess {
   description:  "Access to ledger"
-  participant: "org.sample.**"
+  participant: "org.bcdoc.**"
   operation: ALL
   resource: "org.hyperledger.composer.system.**"
   action: ALLOW
