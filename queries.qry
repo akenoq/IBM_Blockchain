@@ -1,0 +1,7 @@
+query HistoryByPatient {
+  description: "Select all histories for patient"
+  statement:
+    SELECT org.bcdoc.History
+      WHERE (patient.id == _$patientId)
+        ORDER BY [time ASC]
+}

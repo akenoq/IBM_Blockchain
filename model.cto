@@ -1,0 +1,49 @@
+namespace org.bcdoc
+
+/**
+ * A Doctor participant
+ */
+participant Doctor identified by id {
+  o String id
+  o String firstName
+  o String lastName
+  o String speciality
+  o String hospital
+}
+
+/**
+ * A Patient participant
+ */
+participant Patient identified by id {
+  o String id
+  o String firstName
+  o String lastName
+  o String speciality
+  o String hospital
+}
+
+/**
+ * An History asset
+ */
+asset History identified by id {
+    o String id
+    o String title
+    o String[] tag
+    o String record
+    o DateTime created_at
+    o DateTime updated_at
+    --> Doctor doctor
+    --> Patient patient
+}
+
+transaction addHistory {
+    --> History history
+}
+
+transaction addPatient {
+    --> Patient patient
+}
+
+transaction addDoctor {
+    --> Doctor doctor
+}
