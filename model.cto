@@ -18,8 +18,6 @@ participant Patient identified by id {
   o String id
   o String firstName
   o String lastName
-  o String speciality
-  o String hospital
 }
 
 /**
@@ -32,18 +30,8 @@ asset History identified by id {
     o String record
     o DateTime created_at
     o DateTime updated_at
-    --> Doctor doctor
-    --> Patient patient
+    o String doctor_id
+    o String patient_id
 }
 
-transaction addHistory {
-    --> History history
-}
 
-transaction addPatient {
-    --> Patient patient
-}
-
-transaction addDoctor {
-    --> Doctor doctor
-}
