@@ -33,11 +33,14 @@ BlockChain Doctor
 - JavaScript
 - jQuery
 
+![](architecture.jpg)
+
 ### Приложения
 
 - Web-приложение http://medics-client.herokuapp.com/
 - Android-приложение
 
+![](android.gif)
 
 # Useful links
 
